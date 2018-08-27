@@ -1,0 +1,69 @@
+input {
+	box-shadow: none;
+}
+.h-10 {
+	height: 10%;
+}
+.h-15 {
+	height: 15%;
+}
+.h-85 {
+	height: 85%;
+	overflow: auto;
+}
+.h-80 {
+	height: 80%;
+}
+.contenu {
+	box-shadow: 0 0 5px rgba(0,0,0,0.6);
+}
+.bg-image {
+	background-image: url(../images/bck.png);
+	background-size: cover;
+	background-attachment: fixed;
+}
+.bg-image > .row {
+	background-color: rgba(0,0,0,0.1);
+}
+.wrapper h1 {
+	text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
+	margin-bottom: 20px
+}
+.iframe {
+	height: 89%;
+	border: none;
+}
+.aside {
+	border: none;
+	height: 89%;
+}
+.msg {
+	margin-bottom: 10px;
+	padding: 10px;
+	width: 60%;
+	clear: both;
+}
+.msg h4, .msg h5 {
+	margin: 0;
+}
+.msg.other {
+	text-align: right;
+	float: right;
+	margin-right: 10px
+}
+.msg.other h5 {
+	font-size: 1em;
+	font-weight: bold;
+}
+.liste a {
+	text-decoration: none;
+	color: #FFF;
+	display: block;
+	padding: 10px;
+}
+.liste a:hover {
+	background: #666;
+}
+.messagesLink {
+	outline: 0 !important;
+}

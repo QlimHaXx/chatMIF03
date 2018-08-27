@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr" class="h-100">
+
+    <head>
+		<title>WebApplication</title>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="css/bootstrap.min.css" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	</head>
+	<body class="h-100">
+		<div id="myModal" class="modal fade" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header bg-danger text-white">
+						<h5 class="modal-title">Erreur</h5>
+						<button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<p>Le pseudo ou le nom du salon est trop court ! (3 caractères minimum)</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container-fluid h-100 bg-image">
+			<div class="row h-100 align-items-center justify-content-center">
+				<div class="col-6">
+					<div class="h-100 contenu rounded">
+						<div class="bg-dark text-white p-4 rounded-top">
+							<h3>Bienvenue dans notre application de Chat</h3>
+							<p>Veuillez écrire un pseudo</p>
+						</div>
+						<div class="p-4 bg-white rounded-bottom">
+							<!--création du formulaire-->
+							<form method="POST" action="/login" name="indexForm" onsubmit="return validateForm()">
+								<h4>Version 1</h4>
+								<div class="form-group">
+									<label>Pseudo</label>
+									<input class="form-control" type="text" placeholder="Saisir pseudo" name="pseudo_utilisateur" />
+								</div>
+								<div class="form-group">
+									<label>Salon</label>
+									<input class="form-control" type="text" placeholder="Saisir le nom d'un salon" name="choixSalon" />
+								</div>
+								<input id="envoieServlet" class="btn btn-block btn-primary" type="submit" value="Servlet" name="submit_index"/>
+							</form>
+							<form class="mt-3" method="POST" action="/login" name="indexForm2" onsubmit="return validateForm2()">
+								<h4>Version 2</h4>
+								<div class="form-group">
+									<label>Pseudo</label>
+									<input class="form-control" type="text" placeholder="Saisir pseudo" name="pseudo_utilisateur" />
+								</div>
+								<input id="envoieAJAX" class="btn btn-block btn-primary" type="submit" value="AJAX" name="submit_index"/>
+							</form>
+                        </div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="js/jquery-3.2.1.min.js"></script>
+		<script src="js/popper.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/formCheck.js"></script>
+	</body>
+</html>

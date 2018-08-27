@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr" class="h-100">
+    <head>
+		<title>WebApplication</title>
+		<meta charset="utf-8"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+	</head>
+	<body class="h-100">
+        <div class="container-fluid h-100">
+            <div class="row h-100">
+                <div class="h-100 col-sm-4 col-lg-2 bg-dark text-white py-2">
+                    <iframe class="aside w-100" src="Aside.jsp"></iframe>
+                    <form class="w-100 pt-3" method="POST" action="/deconnexion">
+                        <input class="btn btn-block btn-primary" type="submit" value="Quitter le chat" />
+                    </form>
+                </div>
+                <div class="col-sm-8 col-lg-10">
+                    <iframe class="iframe w-100" name="messages" src="Messages.jsp"></iframe>
+                    <div class="h-10 pt-2">
+                        <form method="POST" target="messages" action="Messages.jsp">
+                            <div class="input-group">
+                                <input class="form-control" type="text" placeholder="Saisir votre message" name="msg_utilisateur" />
+                                <span class="input-group-btn">
+                                    <input class="btn btn-primary" type="submit" value="Envoyer" name="submit_msg" />
+                                </span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+	</body>
+</html>
